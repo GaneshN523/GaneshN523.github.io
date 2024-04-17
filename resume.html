@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Universal */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: rgba(0, 0, 0, 0.548);
+      color: white;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(37, 36, 36, 0.89);
+      
+    }
+    h2{
+      margin-bottom: 10px;
+    }
+
+    /* Whole Container */
+    .container {
+      display: flex;
+      width: 1150px;
+      height: 1850px;
+      max-width: 1200px; /* Changed max-width to make it responsive */
+      margin: 0 auto; /* Center align the container */
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 25px;
+  /* opacity: 0.9; Adjust the opacity as needed */
+    }
+
+    .left-section,
+    .right-section {
+      border: 4px solid black;
+      padding-top: 5px;
+
+      height: 1835px;
+
+    }
+
+    .left-section {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 15px;
+      width: 800px;
+      background-color: rgba(44, 44, 126, 0.521);
+    }
+
+    .right-section {
+      border-left: none;
+      background-color: rgba(59, 87, 87, 0.562);
+      width: 350px;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+
+    }
+
+    /* My profile */
+    .profile {
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.473);
+      border: 2px solid black;
+    }
+
+    .profile h1 {
+      margin-left: 10px;
+    }
+
+
+    .profile img {
+      padding: 5px;
+      padding-left: 25px;
+      border: 4px solid black;
+      border-radius: 10px;
+      width: 100px;
+      height: 120px;
+    }
+
+    .adjust{
+      display: block;
+      padding: 5px;
+    }
+
+    .name-info {
+      margin-left: 20px;
+    }
+
+    .name-info p {
+      margin-left: -15px;
+      padding: 10px;
+      display: inline;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .name-info h3 {
+      display: inline;
+      padding: 10px;
+    }
+
+    .name-info .email-text {
+      margin-right: 50px;
+    }
+
+    /* Qualifications */
+    .qualifications {
+      padding: 10px;
+      padding-bottom: 0px;
+      border: 2px solid black;
+    }
+
+    .qualifications h2 {
+      background-color: rgba(0, 0, 0, 0.473);
+      padding-left: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .qualifications h3 {
+      
+      padding: 10px;
+      padding-left: -10px;
+    }
+
+    .qualifications p {
+      margin-left: 20px;
+      padding-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Social media */
+    .social-media{
+      border: 2px solid black;
+    }
+    .social-media img {
+      width: 40px;
+    }
+
+    .left-section p{
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+
+
+    /* Experience */
+    .experience {
+      border: 2px solid black;
+      
+      padding: 10px;
+      padding-bottom: 0px;
+    }
+
+    .experience h2 {
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+
+    .experience p {
+      margin-left: 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Courses & Training */
+    .courses-trainings {
+      border: 2px solid black;
+      padding: 10px;
+      padding-bottom: 0px;
+    }
+
+    .courses-trainings h2 {
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+
+    .courses-trainings p {
+      padding: 10px;
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Extra Curriculum Activities */
+    .extra-curriculum {
+      border: 2px solid black;
+      padding: 10px;
+      padding-bottom: 0px;
+    }
+
+    .extra-curriculum h2 {
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+
+    .extra-curriculum p {
+      padding: 10px;
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Projects */
+    .projects {
+      height: 289px;
+      padding: 10px;
+      padding-bottom: 0px;
+      border: 2px solid black;
+    }
+
+    .projects h2 {
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+
+    .projects h3 {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+
+    }
+
+    .projects p {
+      padding: 10px;
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+    .skills{
+      padding: 5px;
+      border: 2px solid black;
+    }
+    .skills img{
+      width: 80px;
+    }
+    .skills h2{
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+    .skills p{
+      padding: 5px;
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+
+
+    .soft-skills{
+      border: 2px solid black;
+      padding: 5px;
+    }
+    .soft-skills h2{
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+    .soft-skills p{
+      padding: 5px;
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+
+
+    .hobbies{
+      border: 2px solid black;
+      padding: 5px;
+    }
+    .hobbies h2{
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+    .hobbies p{
+      padding: 5px;
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+
+
+    .social-media{
+      border: 2px solid black;
+      padding: 5px;
+    }
+    .social-media h2{
+      background-color: rgba(0, 0, 0, 0.473);
+      padding: 10px;
+    }
+    .social-media p{
+      padding: 5px;
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+
+    .img-set{
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: 3px solid rgba(0, 255, 255, 0.205) ;
+
+
+    }
+    .img-set img{
+      width: 40px;
+      margin: 5px;
+      margin-right: 0;
+      border: 3.5px solid rgba(0, 0, 0, 0.445);
+      border-radius: 20px;
+      margin-left: 40px;
+    }
+    .container h3{
+      background-color: rgba(0, 0, 255, 0.253);
+      border-top: 3px solid rgba(0, 255, 255, 0.205) ;
+    }
+    .fix-pos{
+      margin-right: -15px;
+    }
+    .fix-pos2{
+      margin-right: 45px;
+    }
+    .adjust h3{
+      background-color: transparent;
+      border: none;
+    }
+
+
+/* Rest of the CSS remains unchanged */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section" class="section-change">
+      <div class="profile">
+        <img src="Myimage.jpg" alt="Your Name">
+        <div class="name-info">
+          <h1>Ganesh Nalawade</h1>
+          <div class="adjust">
+          <h3 class="email-text">Email</h3><p>  :-  ganeshnalawade523@gmail.com</p></div>
+
+          <div class="adjust"><h3 class="contact-text">Contact No</h3> <p> :-  +91 8806643429</p></div>
+
+        </div>
+      </div>
+
+      <div class="section qualifications">
+        <h2>Qualifications</h2>
+
+        <h3>Btech Second Year</h3>
+        <div class="img-set">
+          <img src="TKIET.jpg" alt="Bullet Icon"> 
+        <p>Tatyasaheb Kore Institute of Engineering & Technolology, Warnanagar <br>Marks: 64.41%</p>
+        </div>
+
+        <h3>Diploma</h3>
+        <div class="img-set">
+          <img src="NMPI.jpg" alt="Bullet Icon">
+        <p>Nanasheb Mahadik Polytechnic Institute, peth <br>
+          Marks: 85.35%</p></div>
+        <h3>School</h3>
+
+        <div class="img-set">
+          <img src="NESS.png" alt="Bullet Icon">
+        <p>New English School, Shirala <br> Marks: 76%</p>
+        </div>
+      </div>
+
+      <div class="section experience">
+        <h2>Experience</h2>
+        <div class="img-set"><img src="Intrainz.jpg" alt="Bullet Icon"><p> Penetration Tester at Intrainz</p></div>
+      </div>
+
+      <div class="section courses-trainings">
+        <h2>Courses & Trainings</h2>
+        <div class="img-set"><img src="Intrainz.jpg" alt="Bullet Icon"><p class="fix-pos2"> Industrial Training in Cybersecurity</p><img src="AWS.png" alt="Bullet Icon"> <p>AWS Cloud Practitioner Essentials Training</p></div>
+        
+        <div class="img-set"><img src="Simplilearn.jpg" alt="Bullet Icon"><p class="fix-pos"> Apache Spark Beginners Course</p><img src="LetsUpgrade.jpg" alt="Bullet Icon" > <p>Git & Github 3 Days Bootcamp</p></div>
+        
+        <div class="img-set"><img src="LetsUpgrade.jpg" alt="Bullet Icon"><p> HTML & CSS 3 Days Workshop</p></div>
+      </div>
+
+      <div class="section extra-curriculum">
+        <h2>Extra Curriculum Activities</h2>
+        <div class="img-set"><img src="TKIET.jpg" alt="Bullet Icon"><p> Participated in Project Presentation competition</p></div>
+        <div class="img-set"><img src="NMPI.jpg" alt="Bullet Icon"><p> Winner of Poster Presentation competition held at NMPI </p></div>
+        <div class="img-set"><img src="nmce.jpg" alt="Bullet Icon"><p> Runner Up in State Level Paper Presentation Competition during technobyte 2k23 </p></div>
+      </div>
+
+      <div class="section projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>PEDC</h3>
+          <div class="img-set"><img src="TKIET.jpg" alt="Bullet Icon"> <p>PEDC is the Post Electrocution Detection Circuit which was built to detect the electrocution accidents</p></div>
+        </div>
+        <div class="project">
+          <h3>I0T Based Wearable Jacket</h3>
+          <div class="img-set"><img src="NMPI.jpg" alt="Bullet Icon"> <p>This was about building a jacket to detect health condition for the people who work under dangerous scenarios</p></div>
+        </div>
+        <div class="project">
+          <h3>Road Curvature Alertion System</h3>
+          <div class="img-set"><img src="TKIET.jpg" alt="Bullet Icon"><p> This is IOT based project which aims at reducing risks of accidents on extremly curved roads</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section" class="section-change" class="sec2">
+      <div class="skills">
+        <h2>Skills</h2> 
+        <div class="img-set"><img src="C.png" alt="Bullet Icon"><p> C Programming</p></div>
+        <div class="img-set"><img src="dsa.png" alt="Bullet Icon"><p> Data Structures Using C</p></div>
+        <div class="img-set"><img src="C++.png" alt="Bullet Icon"><p> C++</p></div>
+        <div class="img-set"><img src="oops.png" alt="Bullet Icon"><p> Object Orient Programming Using C++</p></div>
+        <div class="img-set"><img src="IOT.jpg" alt="Bullet Icon"><p> Internet of Things</p></div>
+      </div>
+      <div class="soft-skills" class="sec2">
+        <h2>Soft Skills</h2>
+
+        <div class="skill">
+          <div class="img-set"><img src="communication.jpg" alt="Bullet Icon"><p> Communication</p></div>
+          <div class="rating"></div>
+        </div>
+
+        <div class="skill">
+          <div class="img-set"><img src="Problem solving.jpg" alt="Bullet Icon"><p> Problem Solving</p></div>
+            <div class="rating"></div>
+          </div>
+
+          <div class="skill">
+            <div class="img-set"><img src="multitasking.webp" alt="Bullet Icon"><p> Multitasking</p></div>
+            <div class="rating"></div>
+          </div>
+
+          <div class="skill">
+            <div class="img-set"><img src="leadership.webp" alt="Bullet Icon"><p> Team Leadership</p></div>
+            <div class="rating"></div>
+          </div>
+
+        <!-- Add more soft skills here -->
+      </div>
+      <div class="hobbies" class="sec2">
+        <h2>Hobbies</h2>
+        <div class="img-set"><img src="gaming.png" alt="Bullet Icon"><p> Gaming</p></div>
+        <div class="img-set"><img src="swimming.jpg" alt="Bullet Icon"><p> Swimming</p></div>
+      </div>
+
+      
+      <div class="social-media" class="sec2">
+        <h2>Contact</h2>
+
+        <div class="img-set"><a href="https://www.linkedin.com/in/ganesh-nalawade?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="linkedin.png" alt="Social Media Icon"></a><p>LinkedIn</p></div>
+        <div class="img-set"><a href="https://www.instagram.com/ganeshn_123?igsh=bTgyOWcxNTRhbHZw"><img src="Instagram.jpg" alt="Social Media Icon"></a><p>Instagram</p></div>
+        <div class="img-set"><a href="https://ganeshn523.github.io/contact.html"><img src="whatsapp.jpg" alt="Social Media Icon"></a><p></p>whatsapp</div>
+        <!-- Add more social media icons here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

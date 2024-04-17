@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh - ETC & IT Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color:  rgba(255, 68, 0, 0.884);
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+nav ul li a:hover{
+    
+    color:rgb(167, 41, 32);
+    font-size: 1.01;
+
+}
+.left{
+    font-size: 1.5rem;
+}
+.about-top{
+    padding: 10px;
+    height: 120px;
+    display: flex;
+    justify-content:space-evenly ;
+}
+.about-info{
+    text-align: justify;
+    height: 80vh;
+    padding: 20px;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+.about-head{
+    
+    
+    width: 40%;
+    padding: 40px;
+    padding-left: 0px;
+    
+}
+.about-img{
+    width: 90px;
+    height: 110px;
+    padding: 10px;
+    margin-left: 0px;
+    border: 4px solid black;
+}
+.about-info .about-top img{
+
+}
+.about-para{
+    padding: 20px;
+    margin: 10px;
+    line-height: 20px;
+    
+}
+.about-hr{
+    margin: 20px;
+}
+main hr{
+    border: 0;
+    background: black;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+footer{
+    margin-top: 40px;
+    background-color: rgb(67, 65, 73);
+    
+}
+.footer{
+    display: flex;
+    padding: 23px 122px;
+
+
+
+}
+.footer ul{
+    list-style: none;
+}
+.footer > div{
+    width: 222px;
+}
+
+footer .footer-rights{
+    text-align: center;
+    color: gray;
+    padding: 12px 0;
+}
+@media only screen and (max-width: 768px) {
+    nav {
+        height: auto;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    main hr {
+        margin: 20px 0;
+    }
+        .footer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-para{
+        margin-bottom: 500px;
+    }
+    .sec-foot{
+        margin-top: 100px;
+    }
+}
+        </style>
+</head>
+<body>
+    
+
+<header>
+    <nav>
+    <div class="left">Ganesh's Portfolio</div>
+    <div class="right">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/Project.html">Projects</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+</nav>
+</header>
+<main>
+    <section class="about-info">
+        
+        <div class="about-top">
+        <img src="MyImage2.jpg" alt="" class="about-img">
+        <h1 class="about-head">This is my about section</h1>
+        </div>
+<hr class="about-hr">
+    <p class="about-para">
+        👋 Hello and welcome! I'm Ganesh, an Electronics and Telecommunications Engineer with a deep passion for Information Technology (IT).
+<br>
+<br>
+
+        With a solid foundation in electronics and telecommunications, my journey into the realm of IT has been nothing short of exhilarating. From the intricate circuits of hardware to the boundless possibilities of software, I thrive at the intersection where technology meets innovation.
+        <br>
+        <br>
+
+        Thank you for joining me on this journey!
+        </p>
+    
+    </section>
+   </main>
+<section class="sec-foot"><footer>
+    <div class="footer">
+        <div class="first">
+            Ganesh's Portfolio
+        </div>
+        <div class="footer-second">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer-rights">
+        Copyright &#169; www.ganeshsportfolio.com | All rights reserved
+    </div>
+</footer></section>
+  
+</body>
+</html>

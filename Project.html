@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Container</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        color: black;
+        background-color: white;
+        font-family: sans-serif;
+    }
+
+    .container {
+        margin-top: 25px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .left {
+        flex: 0 0 20%; /* 20% width */
+    }
+
+    .left img {
+        width: 150px;
+        height: 90px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    .middle {
+        flex: 0 0 60%; /* 70% width */
+        text-align: left;
+        padding-left: 20px;
+        background-color: black;
+    }
+
+    .right {
+        flex: 0 0 10%; /* 10% width */
+        text-align: right;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: orange;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .description {
+        width: 95%;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: justify;
+    }
+    .description p{
+        padding: 10px;
+    }
+
+    .show {
+        height: 200px;
+    }
+
+
+    *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color:  rgba(255, 68, 0, 0.884);
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+nav ul li a:hover{
+    
+    color: rgb(167, 41, 32);
+    font-size: 1.01;
+
+}
+.left{
+    font-size: 1.5rem;
+}
+
+main hr{
+    border: 0;
+    background:black;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+footer{
+    margin-top: 40px;
+    background-color: rgb(67, 65, 73);
+    
+}
+.footer{
+    margin-top: 400px;
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+
+
+}
+.footer ul{
+    list-style: none;
+}
+.footer > div{
+    width: 222px;
+}
+
+footer .footer-rights{
+    text-align: center;
+    color: gray;
+    padding: 12px 0;
+}
+@media only screen and (max-width: 768px) {
+    nav {
+        height: auto;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    main hr {
+        margin: 20px 0;
+    }
+        .footer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .footer{
+        margin-top: -400px;
+    }
+    .container{
+        width: 44vw;
+        margin-top: 10px;
+        border-radius: 0px;
+    }
+    .middle{
+        background-color: black;
+        display: flex;
+        height: 100px;
+        width: 40px;
+        align-items: center;
+        
+    }
+    button{
+        margin-left: 8px;
+        height: 100px;
+    }
+    .sec-foot{
+        margin-top: 850px;
+    }
+
+    .description{
+        margin-left: 8px;
+        padding: 2px;
+    }
+}
+
+</style>
+<body>
+<header>
+    <nav>
+        <div class="left">Ganesh's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/Project.html">Projects</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+</header>
+    <div class="container">
+        <div class="left">
+            <img src="IOT.png" alt="Picture">
+        </div>
+        <div class="middle">
+            <p>IOT Based Wearable Jacket</p>
+        </div>
+        <div class="right">
+            <button onclick="toggleDescription('description1')">Read</button>
+        </div>
+    </div>
+    
+    <div class="description" id="description1">
+        <p>IOT Based Wearable Jacket project was based on monitoring health of the people working under hazardous conditions & to send alert messages if an individual meets with an accident or any health issue.</p>
+    </div>
+
+
+    <div class="container">
+        <div class="left">
+            <img src="Electrocution.jpg" alt="Picture">
+        </div>
+        <div class="middle">
+            <p>PEDC</p>
+        </div>
+        <div class="right">
+            <button onclick="toggleDescription('description2')">Read</button>
+        </div>
+    </div>
+    
+    <div class="description" id="description2">
+        <p>PEDC is Post Electrocution Detection Circuit which detects the electrocution accidents.</p>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <img src="IOT.png" alt="Picture">
+        </div>
+        <div class="middle">
+            <p>Road Curvature Alertion System</p>
+        </div>
+        <div class="right">
+            <button onclick="toggleDescription('description3')">Read</button>
+        </div>
+    </div>
+    
+    <div class="description" id="description3">
+        <p>This project aims at reducing the risk of accidents by giving alert signs on signage boards where there are extremly curved roads. We have built this project with the help of IOT</p>
+    </div>
+
+
+    <div class="container">
+        <div class="left">
+            <img src="Web Dev.jpg" alt="Picture">
+        </div>
+        <div class="middle">
+            <p>Portfolio Website</p>
+        </div>
+        <div class="right">
+            <button onclick="toggleDescription('description4')">Read</button>
+        </div>
+    </div>
+    
+    <div class="description" id="description4">
+        <p>I've built my personal portfolio website to display my academic and professional information on the internet. I've hosted this website via Github repositories</p>
+    </div>
+
+    <section class="sec-foot"><footer>
+        <div class="footer">
+            <div class="first">
+                Ganesh's Portfolio
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.ganeshsportfolio.com | All rights reserved
+        </div>
+    </footer></section>
+    
+<script>
+    function toggleDescription(descriptionId) {
+        var description = document.getElementById(descriptionId);
+        description.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
